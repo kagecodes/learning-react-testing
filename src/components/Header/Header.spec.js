@@ -2,18 +2,24 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Header from '../Header'
 
+const setUp = (props = {}) => {
+  const component = shallow(<Header {...props} />)
+  return component
+}
+
 describe('Header Component', () => {
+  let component
+  beforeEach(() => {
+    component = setUp()
+  })
+
   it('Should render without errors', () => {
-    const component = shallow(<Header />)
-    console.log(component.debug())
     const wrapper = component.find('.headerComponent')
     expect(wrapper.length).toBe(1)
   })
 
   it('Should render a logo', () => {
-    const component = shallow(<Header />)
     const wrapper = component.find('.logoImg')
-    console.log(wrapper.debug())
     expect(wrapper.length).toBe(1)
   })
 })
