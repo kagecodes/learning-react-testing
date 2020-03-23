@@ -20,5 +20,5 @@ class Headline extends Component {
     )
   }
 }
-
+ 
 export default Headline
