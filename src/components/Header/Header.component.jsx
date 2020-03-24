@@ -7,7 +7,7 @@ const Header = () => {
     <S.Header data-test="headerComponent">
       <div data-test="wrap">
         <div data-test="logo">
-            <img data-test="logoImg" src={Logo} alt="Logo"/>
+          <img data-test="logoImg" src={Logo} alt="Logo" />
         </div>
       </div>
     </S.Header>
